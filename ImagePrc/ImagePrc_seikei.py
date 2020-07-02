@@ -105,5 +105,10 @@ img_rot = img_rot[int(y1):int(y2), int(x1):int(x2)]
 x, y, c = img2.shape
 img_rot = cv2.resize(img_rot, (y, x))
 
+print(type(img_rot))
+
 # 結果表示
 display_cv_image(img_rot, '.png')
+
+# 結果保存
+cv2.imwrite('./result.jpg', img_rot)
